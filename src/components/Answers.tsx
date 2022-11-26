@@ -46,7 +46,7 @@ const Answers = ({ incorrectAnswers,
         <>
             {answers?.map((answer, index) => (
                 (correct == 'incorrect' && answer == correctAnswer)
-                    ? <button disabled={disabled} style={{ "width": '100%', 'margin': '1px' }} className="bg-green-500 text-white font-bold py-2 px-4 rounded" dangerouslySetInnerHTML={{ __html: answer }} />
+                    ? <button disabled={disabled} style={{ "width": '100%', 'margin': '1px' }} className="bg-green-500 text-white font-bold py-2 px-4 rounded" key={index} value={answer} dangerouslySetInnerHTML={{ __html: answer }} />
                     : (correct == 'incorrect' && answer == answerClicked) ?
                         <button disabled={disabled} style={{ "width": '100%', 'margin': '1px' }} className="bg-red-500 text-white font-bold py-2 px-4 rounded" key={index} value={answer} onClick={(e: React.ChangeEvent<any>) => handleClick(e)} dangerouslySetInnerHTML={{ __html: answer }} />
                         : (correct == 'correct' && answer == correctAnswer) ?
