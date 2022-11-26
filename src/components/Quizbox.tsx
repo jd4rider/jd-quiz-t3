@@ -17,7 +17,7 @@ const Quizbox = ({ category, number }: Props) => {
   const [score, setScore] = useState(0)
   const [correct, setCorrect] = useState('unanswered')
   const [win, setWin] = useState(false)
-  const [categoryTitle, setCategoryTitle] = useState<String>('')
+  const [categoryTitle, setCategoryTitle] = useState<string>('')
 
   const nextHandler = () => {
     if (currentQuestion < questionCount - 1) setCurrentQuestion(currentQuestion + 1)
