@@ -5,7 +5,7 @@ import { cat } from '../types/types';
 
 interface Props {
   category: cat,
-  number: Number
+  number: number
 }
 
 const Quizbox = ({ category, number }: Props) => {
